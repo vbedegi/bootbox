@@ -410,6 +410,7 @@ var bootbox = window.bootbox || (function(document, $) {
             // any truthy value passed to onEscape will dismiss the dialog
             // as long as the onEscape function (if defined) doesn't prevent it
             if (e.which === 27 && options.onEscape) {
+                e.preventDefault();
                 onCancel('escape');
             }
         });
